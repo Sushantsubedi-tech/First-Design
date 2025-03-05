@@ -12,57 +12,26 @@ requestAnimationFrame(raf);
 }
 lenis();
 function hoveranimationinnav(){
-    let anchor = document.querySelectorAll("#MID a")
-let background = document.querySelector("#navbar #background")
-console.log(anchor)
-anchor.forEach(function(elem,index){
-    if (index==0){
-        elem.addEventListener("mouseover",function(elem){
-         gsap.to(background,{
-              x:"667px",
-            duration:1,
-            opacity:1
-         })
-    
-        
-        })
-    }
-    else if(index==1){
-        elem.addEventListener("mouseover",function(elem){
-            gsap.to(background,{
-                x:"740px",
-              duration:1,
-              opacity:1
-           })
-        })
-    }
-    else if(index==2){
-        elem.addEventListener("mouseover",function(elem){
-            gsap.to(background,{
-                x:"813px",
-              duration:1,
-              opacity:1
-           })
-    
-        })
-    }
-    else if(index==3){
-        elem.addEventListener("mouseover",function(elem){
-            gsap.to(background,{
-                x:"899px",
-              duration:1,
-              opacity:1
-           })
-    
-        })
-    }
-    elem.addEventListener("mouseout",function(elem){
-        gsap.to(background,{
-            x:"-100%",
-          duration:1,
-          opacity:0
-       })
-    })
-})
+    let anchor = document.querySelectorAll("#MID a");
+    let background = document.querySelector("#navbar #background");
+
+    anchor.forEach((elem) => {
+        elem.addEventListener("mouseover", function() {
+            gsap.to(background, {
+                x: elem.getBoundingClientRect().left + "px",
+                width: elem.getBoundingClientRect().width + "px",
+                duration: 0.5,
+                opacity: 1
+            });
+        });
+
+        elem.addEventListener("mouseout", function() {
+            gsap.to(background, {
+                x:0,
+                opacity: 0,
+                duration: 0.5
+            });
+        });
+    });
 }
 hoveranimationinnav();

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar with Hover Effect</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #navbar {
+            height: 80px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            position: fixed;
+            background: #333;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            position: relative;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            padding: 10px 15px;
+            overflow: hidden;
+        }
+
+        .nav-links a::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transition: left 0.3s ease-in-out;
+        }
+
+        .nav-links a:hover::before {
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <div></div> <!-- Empty div for the 1fr column -->
+        <div class="nav-links">
+            <a href="#">HOME</a>
+            <a href="#">WORK</a>
+            <a href="#">SERVICE</a>
+            <a href="#">PROJECTS</a>
+        </div>
+        <div></div> <!-- Empty div for the 1fr column -->
+    </nav>
+</body>
+</html>
