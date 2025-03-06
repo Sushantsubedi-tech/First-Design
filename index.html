@@ -1,38 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>LET'S BUILD OWN DESIGN</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>LET'S BUILD OWN DESIGN</title>
 </head>
+
 <body>
-    
-    <div id="main">
-        <div id="navbar">
-            <div id="background"> </div>
-            <div id="left">
-               <img src="/logo.png" alt="" height="70px" width="200px">
-            </div>
-            <div id="MID">
-                <a href="#">HOME</a>
-                <a href="#">WORK</a>
-                <a href="#">SERVICE</a>
-                <a href="#">PROJECTS</a>
-            </div>
-            <div id="right">
-                <i class="fa-solid fa-bars"></i>
-            </div>
-        </div>
-        <div id="page1">
-            <iframe src='https://my.spline.design/starterscenecopy-b4a05cdb7031db6c62410cd1d00851c2/' frameborder='0' width='100%' height='100%'></iframe>
-        </div>
-        <div id="page2"></div>
+  <div id="main">
+    <div id="navbar">
+      <div id="background"></div>
+      <div id="left">
+        <img src="/logo-removebg-preview.png" alt="" height="70px" width="200px" />
+      </div>
+      <div id="MID">
+        <a href="#">HOME</a>
+        <a href="#">WORK</a>
+        <a href="#">SERVICE</a>
+        <a href="#">PROJECTS</a>
+      </div>
+      <div id="right">
+        <i class="fa-solid fa-bars"></i>
+      </div>
     </div>
+    <div id="fakenav"></div>
+    <div id="page1">
+      <video src="/hero-cut-1.mp4" autoplay loop muted height="100vh" width="100vw"> </video>
+      <div id="content-container">
+        <h1>I'm a <span>WEB-DEVELOPER</span></h1>
+        <p>🚀 Passionate Web Developer | 💻 Skilled in HTML, CSS, JavaScript & modern frameworks | 🎨 Crafting
+          responsive & user-friendly web solutions | 📚 Always learning & innovating!</p>
+        <div class="imagecontainer">
+          <img src="/discord.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <section>
+      <h1>SOME PROJECTS</h1>
+    </section>
+    <div id="page2">
+      <button id="prev">
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+      <div id="content-wrapper">
+        <div id="card1" class="card">
+         <video src="/project cy.mp4" loop muted autoplay ></video>
+         <h1>Projects Link</h1>
+         <a href="https://sushantsubedi-tech.github.io/Cynthia-Ugwu-ui-/" target="_blank">https://sushantsubedi-tech.github.io/Cynthia-Ugwu-ui-/</a>
+         
+        </div>
+        <div id="card2" class="card">
+         <video src="/project made with gsap.mp4" loop muted autoplay ></video>
+         <h1>Projects Link</h1>
+         <a href="https://sushantsubedi-tech.github.io/Made-with-gsap/" target="_blank">https://sushantsubedi-tech.github.io/Made-with-gsap/</a>
+        </div>
+        <div id="card3" class="card">
+         <video src="/project sid.mp4" loop muted autoplay ></video>
+         <h1>Projects Link</h1>
+         <a href="https://sushantsubedi-tech.github.io/sid-ui-clone/" target="_blank">https://sushantsubedi-tech.github.io/sid-ui-clone/</a>
+        </div>
+        <div id="card4" class="card">
+         <video src="/project twogood.mp4" loop muted autoplay ></video>
+         <h1>Projects Link</h1>
+         <a href="https://sushantsubedi-tech.github.io/Two-Good-Co-ui/" target="_blank">https://sushantsubedi-tech.github.io/Two-Good-Co-ui/</a>
+        </div>
+        <div id="card5" class="card">
+         <video src="/project vivo.mp4" loop muted autoplay ></video>
+         <h1>Projects Link</h1>
+         <a href="https://sushantsubedi-tech.github.io/Web-project/" target="_blank">https://sushantsubedi-tech.github.io/Web-project/</a>
+        </div>
+      </div>
+      <button id="next">
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
 </body>
-<script src="https://unpkg.com/lenis@1.1.22/dist/lenis.min.js"></script> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://unpkg.com/lenis@1.1.22/dist/lenis.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+  integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+  integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="script.js"></script>
+
 </html>
