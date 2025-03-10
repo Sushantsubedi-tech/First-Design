@@ -11,6 +11,37 @@ function raf(time) {
 requestAnimationFrame(raf);
 }
 lenis();
+function preloader(){
+    document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll("img");
+        const videos = document.querySelectorAll("video source");
+        let loadedItems = 0;
+        const totalItems = images.length + videos.length;
+
+        function checkLoaded() {
+            loadedItems++;
+            if (loadedItems === totalItems) {
+                document.body.style.display = "block"; // Show content after all are loaded
+            }
+        }
+
+        // Preload Images
+        images.forEach(img => {
+            const tempImg = new Image();
+            tempImg.src = img.src;
+            tempImg.onload = checkLoaded;
+        });
+
+        // Preload Videos
+        videos.forEach(video => {
+            const tempVideo = document.createElement("video");
+            tempVideo.src = video.src;
+            tempVideo.preload = "auto";
+            tempVideo.oncanplaythrough = checkLoaded;
+        });
+    });
+}
+preloader();
 function hoveranimationinnav(){
     let anchor = document.querySelectorAll("#MID a");
     let background = document.querySelector("#navbar #background");
@@ -52,7 +83,7 @@ setInterval(function() {
 
 }
 landingpagetext();
-function imagechange(){
+function videochange(){
     let next = document.querySelector("#next")
     let prev = document.querySelector("#prev")
     let cards = document.querySelectorAll(".card")
@@ -60,6 +91,10 @@ function imagechange(){
     cards.forEach((card,index) => {
         card.style.left = `${index*100}%`;
     })
+    setInterval(function(){
+        counter++
+        slider()
+    },5000)
    next.addEventListener("click",function(){
     counter++
     if(counter == cards.length){
@@ -79,4 +114,4 @@ function imagechange(){
     card.style.transform = `translateX(-${counter*100}%)`;
    })
 }}
-imagechange()
+videochange();
